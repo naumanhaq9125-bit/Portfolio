@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Muhammad Nauman Ul Haq — Full Stack MERN Developer &amp; Graphic Designer. Building immersive web experiences with React, Node.js, Express, and MongoDB.">
+    <meta name="keywords"
+        content="MERN Developer, Full Stack Developer, React, Node.js, MongoDB, Portfolio, Muhammad Nauman Ul Haq, COMSATS Islamabad Sahiwal Campus">
+    <meta name="author" content="Muhammad Nauman Ul Haq">
+    <meta property="og:title" content="Muhammad Nauman Ul Haq | Full Stack MERN Developer">
+    <meta property="og:description"
+        content="Full Stack MERN Developer &amp; Graphic Designer building immersive digital experiences.">
+    <title>Muhammad Nauman Ul Haq | Full Stack MERN Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== SPLASH SCREEN ==================== -->
+    <div id="splashScreen" class="splash-screen" aria-label="Loading site">
+        <div class="splash-content">
+            <h1 class="splash-name">Muhammad Nauman Ul Haq</h1>
+            <p class="splash-role">Full Stack MERN Developer</p>
+            <div class="splash-loader"></div>
+        </div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Go to top">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">NH</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#hero" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#printonic" class="nav-link" role="menuitem">Printonic</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="hero-section" aria-label="Hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <div class="hero-badge reveal-up">
+                        <span class="badge-pulse" aria-hidden="true"></span>
+                        Available for Hire
+                    </div>
+
+                    <h1 class="hero-name">
+                        <span class="hero-name-word reveal-up" style="--delay:0.05s">Muhammad</span>
+                        <span class="hero-name-word hero-name-accent reveal-up" style="--delay:0.15s">Nauman</span>
+                        <span class="hero-name-word hero-name-accent reveal-up" style="--delay:0.25s">Ul Haq</span>
+                    </h1>
+
+                    <div class="hero-role reveal-up" style="--delay:0.35s">
+                        <span class="role-static">I build&nbsp;</span>
+                        <span id="typedText" class="typed-text" aria-live="polite"></span>
+                        <span class="typed-cursor" aria-hidden="true">|</span>
+                    </div>
+
+                    <p class="hero-desc reveal-up" style="--delay:0.45s">
+                        Full Stack MERN Developer &amp; Graphic Designer crafting immersive
+                        web experiences — from pixel-perfect React frontends to scalable
+                        Node.js backends. Currently at COMSATS University Islamabad, Sahiwal Campus., turning ideas
+                        into digital masterpieces.
+                    </p>
+
+                    <div class="hero-cta reveal-up" style="--delay:0.55s">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary" id="downloadCvBtn">
+                            <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-chips reveal-up" style="--delay:0.65s">
+                        <span class="hero-chip"><i class="fab fa-react" aria-hidden="true"></i> React</span>
+                        <span class="hero-chip"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</span>
+                        <span class="hero-chip" aria-label="MongoDB">🍃 MongoDB</span>
+                        <span class="hero-chip" aria-label="Express">⚡ Express</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal-right" style="--delay:0.2s">
+                    <div class="code-card hero-float" aria-hidden="true">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot-r"></span>
+                                <span class="dot-y"></span>
+                                <span class="dot-g"></span>
+                            </div>
+                            <span class="code-filename">nauman.config.js</span>
+                        </div>
+                        <pre class="code-body"><code><span class="ck">const</span> <span class="cv">developer</span> <span class="co">=</span> {
+  <span class="ck2">name</span><span class="co">:</span>    <span class="cs">'Nauman Ul Haq'</span><span class="co">,</span>
+  <span class="ck2">role</span><span class="co">:</span>    <span class="cs">'MERN Developer'</span><span class="co">,</span>
+  <span class="ck2">stack</span><span class="co">:</span>   [<span class="cs">'React'</span><span class="co">,</span> <span class="cs">'Node'</span><span class="co">,</span>
+           <span class="cs">'Express'</span><span class="co">,</span> <span class="cs">'MongoDB'</span>]<span class="co">,</span>
+  <span class="ck2">design</span><span class="co">:</span>  <span class="cs">'PRINTONIC Studio'</span><span class="co">,</span>
+  <span class="ck2">open</span><span class="co">:</span>    <span class="cb">true</span>  <span class="cm">// hire me!</span>
+}<span class="co">;</span></code></pre>
+                    </div>
+                    <div class="hero-stats-row" aria-label="Quick Stats">
+                        <div class="h-stat">
+                            <span class="h-stat-num" data-target="7">0</span><span class="h-stat-sym">+</span>
+                            <span class="h-stat-lbl">Projects</span>
+                        </div>
+                        <div class="h-stat-sep"></div>
+                        <div class="h-stat">
+                            <span class="h-stat-num" data-target="50">0</span><span class="h-stat-sym">+</span>
+                            <span class="h-stat-lbl">Design Orders</span>
+                        </div>
+                        <div class="h-stat-sep"></div>
+                        <div class="h-stat">
+                            <span class="h-stat-num" data-target="6">0</span>
+                            <span class="h-stat-lbl">Semesters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section" aria-label="About">
+        <div class="container">
+            <div class="section-header reveal-up">
+
+                <h2 class="section-title">Who I Am</h2>
+                <p class="section-sub">Developer. Designer. Creator.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-story void-card reveal-left" style="--delay:0.1s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="about-icon"><i class="fas fa-terminal" aria-hidden="true"></i></div>
+                    <h3>My Story</h3>
+                    <p>
+                        I'm <strong>Muhammad Nauman Ul Haq</strong>, a passionate Full Stack
+                        MERN Developer from Sahiwal, Pakistan. I turn complex problems into
+                        beautiful, high-performance web applications.
+                    </p>
+                    <p>
+                        Studying Computer Science at <strong>COMSATS University Islamabad, Sahiwal Campus.</strong>,
+                        I've shipped 7+ projects across web development, AI, mobile apps,
+                        and databases — and I run my own brand design business, <strong>PRINTONIC</strong>.
+                    </p>
+                    <p>
+                        My mission: blend world-class engineering with stunning design to
+                        build products people genuinely love.
+                    </p>
+                    <div class="about-location">
+                        <i class="fas fa-location-dot" aria-hidden="true"></i>
+                        <span>Sahiwal, Punjab, Pakistan</span>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <div class="stats-grid">
+                        <div class="stat-card void-card reveal-up" style="--delay:0.05s">
+                            <div class="card-glow" aria-hidden="true"></div>
+                            <div class="stat-icon-wrap"><i class="fas fa-code" aria-hidden="true"></i></div>
+                            <div class="stat-num-row">
+                                <span class="stat-num" data-target="7">0</span><span class="stat-sym">+</span>
+                            </div>
+                            <span class="stat-lbl">Projects Built</span>
+                        </div>
+                        <div class="stat-card void-card reveal-up" style="--delay:0.15s">
+                            <div class="card-glow" aria-hidden="true"></div>
+                            <div class="stat-icon-wrap"><i class="fas fa-palette" aria-hidden="true"></i></div>
+                            <div class="stat-num-row">
+                                <span class="stat-num" data-target="50">0</span><span class="stat-sym">+</span>
+                            </div>
+                            <span class="stat-lbl">Design Orders</span>
+                        </div>
+                        <div class="stat-card void-card reveal-up" style="--delay:0.25s">
+                            <div class="card-glow" aria-hidden="true"></div>
+                            <div class="stat-icon-wrap"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                            <div class="stat-num-row">
+                                <span class="stat-num" data-target="6">0</span>
+                            </div>
+                            <span class="stat-lbl">Semesters Done</span>
+                        </div>
+                        <div class="stat-card void-card reveal-up" style="--delay:0.35s">
+                            <div class="card-glow" aria-hidden="true"></div>
+                            <div class="stat-icon-wrap"><i class="fas fa-fire" aria-hidden="true"></i></div>
+                            <div class="stat-num-row">
+                                <span class="stat-num" data-target="100">0</span><span class="stat-sym">%</span>
+                            </div>
+                            <span class="stat-lbl">Passion</span>
+                        </div>
+                    </div>
+                    <div class="hobbies-card void-card reveal-right" style="--delay:0.2s">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <h3><i class="fas fa-heart" aria-hidden="true"></i> Interests</h3>
+                        <div class="hobbies-list">
+                            <div class="hobby-item"><span>💻</span><span>Web Development</span></div>
+                            <div class="hobby-item"><span>🤖</span><span>AI &amp; Machine Learning</span></div>
+                            <div class="hobby-item"><span>🎨</span><span>Graphic Design</span></div>
+                            <div class="hobby-item"><span>🏏</span><span>Cricket Player</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section id="education" class="section" aria-label="Education">
+        <div class="container">
+            <div class="section-header reveal-up">
+
+                <h2 class="section-title">Academic Journey</h2>
+                <p class="section-sub">The path that shaped my technical foundation</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-spine" aria-hidden="true"></div>
+
+                <div class="timeline-item tl-left reveal-left" style="--delay:0.1s">
+                    <div class="tl-node tl-node-active" aria-hidden="true"><i class="fas fa-university"></i></div>
+                    <div class="tl-card void-card tl-card-active">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <span class="tl-year">2024 — Present</span>
+                        <h3 class="tl-degree">BS Computer Science</h3>
+                        <h4 class="tl-school">COMSATS University Islamabad, Sahiwal Campus.</h4>
+                        <p class="tl-desc">Pursuing BS-CS with deep focus on Web Development, Data Structures &amp;
+                            Algorithms, OOP, Database Systems, App Development, and Artificial Intelligence.</p>
+                        <div class="tl-badge tl-badge-live">
+                            <span class="live-blink" aria-hidden="true"></span>Semester 6 — In Progress
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item tl-right reveal-right" style="--delay:0.2s">
+                    <div class="tl-node" aria-hidden="true"><i class="fas fa-book-open"></i></div>
+                    <div class="tl-card void-card">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <span class="tl-year">2022 — 2024</span>
+                        <h3 class="tl-degree">FSc Pre-Engineering (HSSC)</h3>
+                        <h4 class="tl-school">Divisional Public School &amp; Inter College Sahiwal</h4>
+                        <p class="tl-desc">Studied Physics, Chemistry, and Mathematics with Pre-Engineering curriculum,
+                            honing problem-solving and logical thinking skills.</p>
+                        <div class="tl-badge">Pre-Engineering</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item tl-left reveal-left" style="--delay:0.3s">
+                    <div class="tl-node" aria-hidden="true"><i class="fas fa-school"></i></div>
+                    <div class="tl-card void-card">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <span class="tl-year">2020 — 2022</span>
+                        <h3 class="tl-degree">Matriculation (SSC)</h3>
+                        <h4 class="tl-school">DPS Sahiwal</h4>
+                        <p class="tl-desc">Completed secondary education with strong foundation in Mathematics, Physics,
+                            and Sciences — building the analytical mindset for a tech career.</p>
+                        <div class="tl-badge">Science Group</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section" aria-label="Projects">
+        <div class="container">
+            <div class="section-header reveal-up">
+
+                <h2 class="section-title">What I've Built</h2>
+                <p class="section-sub">Real-world projects showcasing full stack MERN expertise</p>
+            </div>
+            <div class="projects-grid">
+
+                <article class="proj-card void-card reveal-up tilt-card" style="--delay:0s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-shirt" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://github.com/naumanhaq9125-bit" class="proj-link" aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="#" class="proj-link" aria-label="Live Demo"><i
+                                    class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">Fashion House</h3>
+                    <p class="proj-desc">Premium e-commerce website for a lehenga collection with advanced product
+                        filtering, a stunning gallery, and inquiry system.</p>
+                    <div class="proj-tags">
+                        <span class="p-tag">HTML5</span><span class="p-tag">CSS3</span><span
+                            class="p-tag">JavaScript</span>
+                    </div>
+                    <span class="proj-cat">E-Commerce</span>
+                </article>
+
+                <article class="proj-card void-card reveal-up tilt-card" style="--delay:0.08s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-university" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://github.com/naumanhaq9125-bit" class="proj-link" aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="#" class="proj-link" aria-label="Live Demo"><i
+                                    class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">University Student Portal</h3>
+                    <p class="proj-desc">Comprehensive student management system with course registration, grade
+                        tracking, and attendance management dashboard.</p>
+                    <div class="proj-tags">
+                        <span class="p-tag">HTML5</span><span class="p-tag">CSS3</span><span
+                            class="p-tag">JavaScript</span>
+                    </div>
+                    <span class="proj-cat">Web Application</span>
+                </article>
+
+                <article class="proj-card void-card reveal-up tilt-card" style="--delay:0.16s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-car" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://github.com/naumanhaq9125-bit" class="proj-link" aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">Car Showroom Database</h3>
+                    <p class="proj-desc">Full-scale DBMS for a car showroom with inventory management, sales tracking,
+                        and comprehensive customer records.</p>
+                    <div class="proj-tags">
+                        <span class="p-tag">SQL</span><span class="p-tag">DBMS</span><span class="p-tag">DB
+                            Design</span>
+                    </div>
+                    <span class="proj-cat">Database System</span>
+                </article>
+
+                <article class="proj-card void-card reveal-up tilt-card" style="--delay:0s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://github.com/naumanhaq9125-bit" class="proj-link" aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">Property Rental System</h3>
+                    <p class="proj-desc">OOP-based rental management system with clean class architecture handling
+                        property listings, tenants, leases, and payments.</p>
+                    <div class="proj-tags">
+                        <span class="p-tag">OOP</span><span class="p-tag">C++</span><span class="p-tag">DSA</span>
+                    </div>
+                    <span class="proj-cat">System Design</span>
+                </article>
+
+                <article class="proj-card void-card reveal-up tilt-card" style="--delay:0.08s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-list-check" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://github.com/naumanhaq9125-bit" class="proj-link" aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="#" class="proj-link" aria-label="Live Demo"><i
+                                    class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">Task Manager App</h3>
+                    <p class="proj-desc">Full-featured task management application with priorities, deadlines,
+                        categories, and real-time collaborative workflow features.</p>
+                    <div class="proj-tags">
+                        <span class="p-tag">Node.js</span><span class="p-tag">JavaScript</span><span class="p-tag">App
+                            Dev</span>
+                    </div>
+                    <span class="proj-cat">Full Stack App</span>
+                </article>
+
+                <article class="proj-card void-card reveal-up tilt-card proj-featured" style="--delay:0.16s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-ribbon proj-ribbon-feat">✦ Featured</div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://github.com/naumanhaq9125-bit" class="proj-link" aria-label="GitHub"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="#" class="proj-link" aria-label="Demo"><i
+                                    class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">AI Vision Storyteller</h3>
+                    <p class="proj-desc">AI-powered computer vision app that detects scenes, objects &amp; emotions from
+                        images and videos — then auto-generates creative narrative stories from the detected content.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="p-tag">AI / ML</span><span class="p-tag">Computer Vision</span><span
+                            class="p-tag">Python</span>
+                    </div>
+                    <span class="proj-cat">Artificial Intelligence</span>
+                </article>
+
+                <article class="proj-card void-card reveal-up tilt-card proj-live" style="--delay:0.08s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="proj-ribbon proj-ribbon-live">
+                        <span class="live-blink" aria-hidden="true"></span> Live Business
+                    </div>
+                    <div class="proj-top">
+                        <div class="proj-icon"><i class="fas fa-print" aria-hidden="true"></i></div>
+                        <div class="proj-links">
+                            <a href="https://www.facebook.com/profile.php?id=61568547073337" class="proj-link"
+                                id="printonicProjectLink" aria-label="Facebook Page" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="proj-name">PRINTONIC</h3>
+                    <p class="proj-desc">Live hybrid graphic design &amp; printing business on Facebook. Built brand
+                        identity, managed client relationships, and delivered 50+ custom design orders since November
+                        2024.</p>
+                    <div class="proj-tags">
+                        <span class="p-tag">Brand Design</span><span class="p-tag">Graphic Design</span><span
+                            class="p-tag">E-Commerce</span>
+                    </div>
+                    <span class="proj-cat">Live Business</span>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="section" aria-label="Skills">
+        <div class="container">
+            <div class="section-header reveal-up">
+
+                <h2 class="section-title">Technical Arsenal</h2>
+                <p class="section-sub">The tools and technologies I command</p>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-cat void-card reveal-up" style="--delay:0s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="skill-cat-head">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <ul class="skill-list" aria-label="Frontend Skills">
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-html5"></i></span>
+                                <span class="skill-nm">HTML5</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-css3-alt"></i></span>
+                                <span class="skill-nm">CSS3</span>
+                                <span class="skill-pct">88%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="88" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="88"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-js-square"></i></span>
+                                <span class="skill-nm">JavaScript</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-react"></i></span>
+                                <span class="skill-nm">React.js</span>
+                                <span class="skill-pct">82%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="82" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="82"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-bootstrap"></i></span>
+                                <span class="skill-nm">Bootstrap</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-cat void-card reveal-up" style="--delay:0.15s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="skill-cat-head">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                        <h3>Backend &amp; DB</h3>
+                    </div>
+                    <ul class="skill-list" aria-label="Backend Skills">
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-node-js"></i></span>
+                                <span class="skill-nm">Node.js</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b">⚡</span>
+                                <span class="skill-nm">Express.js</span>
+                                <span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="78" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="78"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b">🍃</span>
+                                <span class="skill-nm">MongoDB</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fas fa-database"></i></span>
+                                <span class="skill-nm">SQL / DBMS</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-cat void-card reveal-up" style="--delay:0.3s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="skill-cat-head">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <h3>Design &amp; CS</h3>
+                    </div>
+                    <ul class="skill-list" aria-label="Design and CS Skills">
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b">🎨</span>
+                                <span class="skill-nm">Graphic Design</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b">🤖</span>
+                                <span class="skill-nm">Artificial Intelligence</span>
+                                <span class="skill-pct">72%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="72" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="72"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b">🏗️</span>
+                                <span class="skill-nm">OOP &amp; DSA</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </li>
+                        <li class="skill-row">
+                            <div class="skill-meta">
+                                <span class="skill-icon-b"><i class="fab fa-git-alt"></i></span>
+                                <span class="skill-nm">Git &amp; GitHub</span>
+                                <span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-track" role="progressbar" aria-valuenow="78" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="skill-fill" data-width="78"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Infinite tech belt -->
+            <div class="tech-belt reveal-up" style="--delay:0.4s" aria-label="All Technologies">
+                <div class="belt-track">
+                    <span class="belt-pill"><i class="fab fa-react"></i> React</span>
+                    <span class="belt-pill"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="belt-pill">🍃 MongoDB</span>
+                    <span class="belt-pill">⚡ Express.js</span>
+                    <span class="belt-pill"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="belt-pill"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="belt-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="belt-pill"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    <span class="belt-pill"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="belt-pill">🤖 AI / ML</span>
+                    <span class="belt-pill">🏗️ OOP</span>
+                    <span class="belt-pill">📊 DSA</span>
+                    <!-- duplicates for seamless loop -->
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-react"></i> React</span>
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="belt-pill" aria-hidden="true">🍃 MongoDB</span>
+                    <span class="belt-pill" aria-hidden="true">⚡ Express.js</span>
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    <span class="belt-pill" aria-hidden="true"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="belt-pill" aria-hidden="true">🤖 AI / ML</span>
+                    <span class="belt-pill" aria-hidden="true">🏗️ OOP</span>
+                    <span class="belt-pill" aria-hidden="true">📊 DSA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRINTONIC ==================== -->
+    <section id="printonic" class="section" aria-label="PRINTONIC Business">
+        <div class="container">
+            <div class="printonic-wrap void-card reveal-up">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="print-inner">
+                    <div class="print-left">
+                        <div class="print-live-badge">
+                            <span class="live-blink" aria-hidden="true"></span>Live Business
+                        </div>
+                        <div class="print-brand">PRINTONIC</div>
+                        <div class="print-tag">Where Design Meets Identity</div>
+                        <p class="print-desc">
+                            PRINTONIC is my hybrid graphic design and custom printing
+                            business on Facebook — where creativity meets commerce.
+                            I built the brand from scratch, managing client acquisition,
+                            custom artwork, and order fulfillment since November 2024.
+                        </p>
+                        <div class="print-stats">
+                            <div class="ps-item">
+                                <span class="ps-num">50+</span>
+                                <span class="ps-lbl">Orders Delivered</span>
+                            </div>
+                            <div class="ps-sep"></div>
+                            <div class="ps-item">
+                                <span class="ps-num">Nov '24</span>
+                                <span class="ps-lbl">Since Founded</span>
+                            </div>
+                            <div class="ps-sep"></div>
+                            <div class="ps-item">
+                                <span class="ps-num">100%</span>
+                                <span class="ps-lbl">Satisfaction</span>
+                            </div>
+                        </div>
+                        <a href="https://www.facebook.com/profile.php?id=61568547073337" id="printonicFbLink"
+                            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            Visit PRINTONIC
+                        </a>
+                    </div>
+                    <div class="print-right">
+                        <div class="print-services">
+                            <div class="ps-card hero-float" style="--delay:0s">
+                                <div class="ps-card-icon"><i class="fas fa-paint-brush" aria-hidden="true"></i></div>
+                                <span>Brand Identity</span>
+                            </div>
+                            <div class="ps-card hero-float" style="--delay:0.4s">
+                                <div class="ps-card-icon"><i class="fas fa-print" aria-hidden="true"></i></div>
+                                <span>Custom Printing</span>
+                            </div>
+                            <div class="ps-card hero-float" style="--delay:0.8s">
+                                <div class="ps-card-icon"><i class="fas fa-vector-square" aria-hidden="true"></i></div>
+                                <span>Logo Design</span>
+                            </div>
+                            <div class="ps-card hero-float" style="--delay:1.2s">
+                                <div class="ps-card-icon"><i class="fas fa-image" aria-hidden="true"></i></div>
+                                <span>Digital Art</span>
+                            </div>
+                            <div class="ps-card hero-float" style="--delay:0.2s">
+                                <div class="ps-card-icon"><i class="fas fa-shirt" aria-hidden="true"></i></div>
+                                <span>Merchandise</span>
+                            </div>
+                            <div class="ps-card hero-float" style="--delay:0.6s">
+                                <div class="ps-card-icon"><i class="fas fa-pen-nib" aria-hidden="true"></i></div>
+                                <span>Typography</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section" aria-label="Contact">
+        <div class="container">
+            <div class="section-header reveal-up">
+
+                <h2 class="section-title">Let's Build Together</h2>
+                <p class="section-sub">Have a project in mind? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-cards reveal-left" style="--delay:0.1s">
+                    <div class="contact-card void-card">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div class="cc-info">
+                            <span class="cc-lbl">Email</span>
+                            <a href="mailto:naumanhaq9125@gmail.com" class="cc-val"
+                                id="emailLink">naumanhaq9125@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card void-card">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <div class="cc-info">
+                            <span class="cc-lbl">GitHub</span>
+                            <a href="https://github.com/naumanhaq9125-bit" class="cc-val" id="githubLink"
+                                target="_blank" rel="noopener noreferrer">github.com/naumanhaq9125-bit</a>
+                        </div>
+                    </div>
+                    <div class="contact-card void-card">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <div class="cc-info">
+                            <span class="cc-lbl">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/nauman-ul-haq-9228a0373/" class="cc-val"
+                                id="linkedinLink" target="_blank"
+                                rel="noopener noreferrer">linkedin.com/in/nauman-ul-haq</a>
+                        </div>
+                    </div>
+                    <div class="contact-card void-card">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                        <div class="cc-info">
+                            <span class="cc-lbl">PRINTONIC</span>
+                            <a href="https://www.facebook.com/profile.php?id=61568547073337" class="cc-val"
+                                id="facebookLink" target="_blank" rel="noopener noreferrer">Facebook / PRINTONIC</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap void-card reveal-right" style="--delay:0.2s">
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <form id="contactForm" class="c-form" novalidate>
+                        <div class="form-row-2">
+                            <div class="form-grp">
+                                <label for="cName">Name</label>
+                                <input type="text" id="cName" name="name" placeholder="Your Name" required
+                                    autocomplete="name">
+                            </div>
+                            <div class="form-grp">
+                                <label for="cEmail">Email</label>
+                                <input type="email" id="cEmail" name="email" placeholder="your@email.com" required
+                                    autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="form-grp">
+                            <label for="cSubject">Subject</label>
+                            <input type="text" id="cSubject" name="subject"
+                                placeholder="Project Inquiry / Collaboration">
+                        </div>
+                        <div class="form-grp">
+                            <label for="cMessage">Message</label>
+                            <textarea id="cMessage" name="message" rows="5" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="contactSubmitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo" aria-label="NH Logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">NH</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-name">Muhammad Nauman Ul Haq</p>
+                <p class="footer-role">Full Stack MERN Developer &nbsp;&middot;&nbsp; Graphic Designer
+                    &nbsp;&middot;&nbsp; COMSATS Islamabad, Sahiwal Campus.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/naumanhaq9125-bit" class="ft-social" id="ftGithub" aria-label="GitHub"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nauman-ul-haq-9228a0373/" class="ft-social" id="ftLinkedin"
+                        aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61568547073337" class="ft-social" id="ftFacebook"
+                        aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61568547073337" class="ft-social" id="ftPrintonic"
+                        aria-label="PRINTONIC" target="_blank" rel="noopener noreferrer"><i
+                            class="fas fa-print"></i></a>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="footer-copy">© 2025 Muhammad Nauman Ul Haq. Crafted with 💜 and passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
