@@ -10,13 +10,13 @@
 window.addEventListener('load', () => {
     const splash = document.getElementById('splashScreen');
     if (splash) {
-        // Add a slight delay so the splash screen is visible for a moment
+        // Give enough time for animations to complete before hiding
         setTimeout(() => {
             splash.classList.add('fade-out');
             setTimeout(() => {
                 splash.remove();
             }, 800); // Matches CSS transition duration
-        }, 1200);
+        }, 2200);
     }
 });
 

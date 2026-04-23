@@ -435,7 +435,6 @@ button { font-family: inherit; cursor: pointer; }
     background: linear-gradient(135deg, var(--v-400) 0%, var(--v-300) 60%, var(--neon-soft) 100%);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 20px rgba(124,58,237,0.45));
 }
 
 /* Typed */
@@ -911,7 +910,6 @@ button { font-family: inherit; cursor: pointer; }
     background: linear-gradient(130deg, var(--v-300), var(--v-400), var(--neon-soft));
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 30px rgba(124,58,237,0.5));
     margin-bottom: 8px;
 }
 .print-tag {
@@ -1082,17 +1080,29 @@ button { font-family: inherit; cursor: pointer; }
     /* Nav */
     .nav-links {
         position: fixed; top: var(--nav-h); left: 0; right: 0;
-        flex-direction: column; gap: 4px;
-        background: rgba(3,0,11,0.97);
-        backdrop-filter: blur(20px);
+        flex-direction: column; gap: 8px;
+        background: rgba(3,0,11,0.98);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
         border-bottom: 1px solid var(--border);
-        padding: 20px;
+        padding: 24px 20px 32px;
         transform: translateY(-110%);
         opacity: 0;
-        transition: transform var(--t-med), opacity var(--t-med);
+        visibility: hidden;
+        transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease, visibility 0.5s;
         z-index: 999;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
-    .nav-links.open { transform: translateY(0); opacity: 1; }
+    .nav-links.open { transform: translateY(0); opacity: 1; visibility: visible; }
+    
+    .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 1.05rem;
+    }
+    
     .hamburger { display: flex; }
 
     /* Hero */
@@ -1149,54 +1159,67 @@ button { font-family: inherit; cursor: pointer; }
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: #03000b;
+    background: var(--void);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
+    transition: transform 0.8s cubic-bezier(0.8, 0, 0.2, 1), opacity 0.8s ease, visibility 0.8s ease;
 }
 .splash-screen.fade-out {
+    transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 }
 .splash-content {
     text-align: center;
-    animation: splashReveal 1s ease-out;
+    padding: 0 20px;
 }
-@keyframes splashReveal {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.splash-logo {
+    font-family: var(--ff-mono);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .splash-name {
     font-family: var(--ff-display);
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
-    background: linear-gradient(135deg, var(--v-300), var(--neon-soft));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
+    color: var(--txt-1);
+    margin-bottom: 12px;
     letter-spacing: -0.02em;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 .splash-role {
-    font-family: var(--ff-body);
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    color: var(--txt-3);
-    margin-bottom: 30px;
-    letter-spacing: 0.15em;
+    font-family: var(--ff-mono);
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    color: var(--v-400);
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
-.splash-loader {
-    width: 45px;
-    height: 45px;
-    border: 3px solid rgba(167, 139, 250, 0.15);
-    border-top-color: var(--v-400);
-    border-radius: 50%;
-    margin: 0 auto;
-    animation: loaderSpin 1s linear infinite;
+.splash-progress {
+    width: 260px;
+    height: 2px;
+    background: rgba(124, 58, 237, 0.15);
+    margin: 40px auto 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
 }
-@keyframes loaderSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.splash-progress-bar {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--v-400);
+    box-shadow: 0 0 12px var(--v-500);
+    animation: progressFill 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;
+}
+@keyframes progressFill {
+    0% { width: 0%; }
+    100% { width: 100%; }
 }
